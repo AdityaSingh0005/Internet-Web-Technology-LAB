@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+.quiz-box{
+
+animation:fade .5s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.quiz-box h1{
+    text-align:center;
+    color:#333;
+    margin-bottom:20px;
+}
+
+.progress-container{
+    width:100%;
+    height:10px;
+    background:#ddd;
+    border-radius:20px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+#progress{
+    width:5%;
+    height:100%;
+    background:#4CAF50;
+    transition:.4s;
+}
+
+.question-count{
+    color:#666;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+#question{
+
+font-size:30px;
+margin:25px 0;
+color:#222;
+
+}
+
+#options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:20px;
+}
+
+.option{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+    padding:15px 18px;
+    background:#f8f9ff;
+    border:2px solid #ddd;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:18px;
+    font-weight:500;
+}
+
+.option:hover{
+    border-color:#667eea;
+    background:#eef2ff;
+    transform:translateX(5px);
+}
+
+.option input{
+    transform:scale(1.3);
+    cursor:pointer;
+}
+
+.option input[type="radio"]{
+    accent-color:#667eea;
+}
+
+.buttons{
+    text-align:right;
+    margin-top:25px;
+}
+
+button{
+
+background:#667eea;
+color:white;
+border:none;
+padding:14px 35px;
+font-size:18px;
+font-weight:600;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#4b5fd4;
+transform:scale(1.05);
+
+}
+
+.result{
+    text-align:center;
+}
+
+.result h2{
+    color:#4CAF50;
+    margin-bottom:20px;
+}
+
+.result p{
+    font-size:20px;
+    margin:10px 0;
+}
+
+@media(max-width:700px){
+
+.quiz-box{
+    width:100%;
+}
+
+button{
+    width:100%;
+}
+
+}
