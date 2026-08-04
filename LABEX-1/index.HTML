@@ -3,158 +3,138 @@
 
 <head>
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Singh | Academic Portfolio</title>
 
-<title>Aditya Singh | Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-
-
-<!-- Icons -->
-<link rel="stylesheet" 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
 
-
 <body>
 
+    <div id="progress-bar"></div>
+<!--=========================
+        HEADER
+==========================-->
 
-<!-- Navbar -->
+<header class="header">
 
-<header>
+    <nav class="navbar">
 
-<nav>
+        <a href="#" class="logo">
+            Aditya<span> Singh</span>
+        </a>
 
-<div class="logo">
-Aditya<span>.</span>
-</div>
+        <ul class="nav-links">
 
+            <li><a href="#home">Home</a></li>
 
-<div class="menu-icon" id="menu-icon">
+            <li><a href="#about">About</a></li>
 
-<i class="fas fa-bars"></i>
+            <li><a href="#skills">Skills</a></li>
 
-</div>
+            <li><a href="#education">Education</a></li>
 
+            <li><a href="#projects">Projects</a></li>
 
+            <li><a href="#academic">Academic</a></li>
 
-<ul id="nav-links">
+            <li><a href="#contact">Contact</a></li>
 
-<li>
-<a href="#home">Home</a>
-</li>
+        </ul>
 
+        <div class="nav-buttons">
 
-<li>
-<a href="#about">About</a>
-</li>
+            <button id="theme-toggle">
 
+                <i class="fas fa-moon"></i>
 
-<li>
-<a href="#skills">Skills</a>
-</li>
+            </button>
 
+            <div class="menu-btn">
 
-<li>
-<a href="#education">Education</a>
-</li>
+                <i class="fas fa-bars"></i>
 
+            </div>
 
-<li>
-<a href="#projects">Projects</a>
-</li>
+        </div>
 
-
-<li>
-<a href="#contact">Contact</a>
-</li>
-
-
-</ul>
-
-
-
-<button id="theme-btn">
-
-🌙
-
-</button>
-
-
-</nav>
-
+    </nav>
 
 </header>
 
-
-
-
-
-
-<!-- Hero Section -->
-
+<!--=========================
+        HERO SECTION
+==========================-->
 
 <section class="hero" id="home">
 
+<div class="hero-left">
 
-<div class="hero-content">
+    <span class="hero-tag">
 
+        👋 Welcome to my Portfolio
 
-<h3>
-Hello, I'm
-</h3>
+    </span>
 
+    <h3>
 
-<h1>
-Aditya Singh
-</h1>
+        Hello, I'm
 
+    </h3>
 
-<h2>
-I'm a <span id="typing"></span>
-</h2>
+    <h1>
 
+        Aditya Singh
 
-<p>
+    </h1>
 
-MCA Student passionate about Web Development,
-Data Analytics and building real-world applications.
+    <h2>
 
-</p>
+        MCA Student |
+        <span id="typing"></span>
 
+    </h2>
 
+    <p>
 
-<div class="buttons">
+        Passionate about Web Development,
+        Python Programming,
+        Artificial Intelligence,
+        Data Analytics,
+        and building real-world software solutions.
 
-<a href="resume.pdf.pdf" download class="btn">
+    </p>
+
+<div class="hero-buttons">
+
+<a href="assets/documents/resume.pdf" class="btn" download>
 
 <i class="fas fa-download"></i>
+
 Download Resume
 
 </a>
 
+<a href="#projects" class="btn-outline">
 
-
-<a href="#contact" class="btn-outline">
-Contact Me
-
+View Projects
 
 </a>
 
-
 </div>
 
-
-
-
-<div class="social">
-
+<div class="social-icons">
 
 <a href="https://github.com/AdityaSingh0005" target="_blank">
 
@@ -162,639 +142,854 @@ Contact Me
 
 </a>
 
-
-
 <a href="https://www.linkedin.com/in/aditya-singh-789b14217/" target="_blank">
 
 <i class="fab fa-linkedin"></i>
 
 </a>
 
+<a href="mailto:as8916909@gmail.com">
 
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div class="profile-box">
-
-
-<div class="circle">
-
-
-<img src="Images/Profile.png.png" 
-alt="Profile Photo">
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<!-- About -->
-
-
-<section id="about" class="section">
-
-
-<h2 class="heading">
-About Me
-</h2>
-
-
-
-<div class="about-card">
-
-
-<p>
-
-I am currently pursuing Master of Computer Applications (MCA).
-I have knowledge of programming, web technologies and databases.
-
-I enjoy creating responsive websites and solving programming problems.
-
-My goal is to become a skilled software professional.
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- Skills -->
-
-
-<section id="skills" class="section">
-
-
-<h2 class="heading">
-Skills
-</h2>
-
-
-
-<div class="skills">
-
-
-<div class="skill-box">
-<i class="fab fa-html5"></i>
-<h3>HTML</h3>
-</div>
-
-
-<div class="skill-box">
-<i class="fab fa-css3-alt"></i>
-<h3>CSS</h3>
-</div>
-
-
-<div class="skill-box">
-<i class="fab fa-js"></i>
-<h3>JavaScript</h3>
-</div>
-
-
-
-<div class="skill-box">
-<i class="fab fa-python"></i>
-<h3>Python</h3>
-</div>
-
-
-
-<div class="skill-box">
-<i class="fas fa-database"></i>
-<h3>SQL</h3>
-</div>
-
-
-
-<div class="skill-box">
-<i class="fab fa-java"></i>
-<h3>Java</h3>
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-<!-- Education -->
-
-
-<section id="education" class="section">
-
-
-<h2 class="heading">
-Education
-</h2>
-
-
-
-<div class="timeline">
-
-
-<div class="timeline-item">
-
-
-<h3>
-Master of Computer Applications (MCA)
-</h3>
-
-
-<p>
-Pondicherry University
-</p>
-
-
-</div>
-
-
-
-
-<div class="timeline-item">
-
-
-<h3>
-Bachelor of Computer Applications (BCA)
-</h3>
-
-
-<p>
-GNIOT Institute of Professional Studies
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-
-<!-- Projects -->
-
-
-<section id="projects" class="section">
-
-
-<h2 class="heading">
-Featured Projects
-</h2>
-
-
-
-<div class="project-container">
-
-
-
-<div class="project-card">
-
-
-<img src="images/project1.png">
-
-
-<h3>
-Bookstore Management System
-</h3>
-
-
-<p>
-Flask + MySQL + HTML/CSS/JavaScript
-</p>
-
-
-<a href="#">
-View Project
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="project-card">
-
-
-<img src="images/project2.png">
-
-
-<h3>
-Portfolio Website
-</h3>
-
-
-<p>
-Modern responsive personal portfolio.
-</p>
-
-
-<a href="#">
-View Project
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="project-card">
-
-
-<img src="images/project3.png">
-
-
-<h3>
-Myntra Clone
-</h3>
-
-
-<p>
-Frontend e-commerce website clone.
-</p>
-
-
-<a href="#">
-View Project
-</a>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-<section id="semester-work" class="section">
-
-
-<h2 class="heading">
-Academic Work
-</h2>
-
-
-<div class="subject-container">
-
-
-<div class="subject-card">
-
-<i class="fas fa-globe"></i>
-
-<h3>
-Internet & Web Technologies Lab
-</h3>
-
-<p>
-HTML, CSS, JavaScript Lab Programs
-</p>
-
-
-<a href="semester-work/iwt/index.html">
-Open Dashboard
-</a>
-
-
-</div>
-
-
-
-
-<div class="subject-card">
-
-
-<i class="fas fa-database"></i>
-
-<h3>
-Database Management System
-</h3>
-
-
-<p>
-SQL Programs and Assignments
-</p>
-
-
-<a href="semester-work/dbms/index.html">
-Open Dashboard
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="subject-card">
-
-
-<i class="fas fa-code"></i>
-
-
-<h3>
-Data Structures & Algorithms
-</h3>
-
-
-<p>
-Programs, Notes and Assignments
-</p>
-
-
-<a href="semester-work/dsa/index.html">
-Open Dashboard
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="subject-card">
-
-
-<i class="fas fa-gears"></i>
-
-
-<h3>
-Software Engineering
-</h3>
-
-
-<p>
-Notes, Reports and Assignments
-</p>
-
-
-<a href="semester-work/software-engineering/index.html">
-Open Dashboard
-</a>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-<!-- Semester Work Section -->
-
-<section id="semester-work" class="section">
-
-
-<h2 class="heading">
-Semester Subjects
-</h2>
-
-
-
-<div class="subject-container">
-
-
-
-<div class="subject-card">
-
-<i class="fas fa-globe"></i>
-
-<h3>
-Internet & Web Technologies Lab
-</h3>
-
-
-<p>
-HTML, CSS, JavaScript Lab Programs
-and Assignments
-</p>
-
-
-<a href="semester-work/iwt/index.html">
-View Work
-</a>
-
-
-</div>
-
-
-
-
-
-
-<div class="subject-card">
-
-<i class="fas fa-cogs"></i>
-
-
-<h3>
-Software Engineering
-</h3>
-
-
-<p>
-Assignments, Notes and Reports
-</p>
-
-
-<a href="semester-work/software-engineering/index.html">
-View Work
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="subject-card">
-
-
-<i class="fas fa-database"></i>
-
-
-<h3>
-Database Management System
-</h3>
-
-
-<p>
-SQL Programs, Lab Work and Assignments
-</p>
-
-
-<a href="semester-work/dbms/index.html">
-View Work
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="subject-card">
-
-
-<i class="fas fa-code"></i>
-
-
-<h3>
-Data Structures & Algorithms
-</h3>
-
-
-<p>
-Programs, Assignments and Notes
-</p>
-
-
-<a href="semester-work/dsa/index.html">
-View Work
-</a>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-<!-- Contact -->
-
-
-<section id="contact" class="section">
-
-
-<h2 class="heading">
-Contact
-</h2>
-
-
-
-<div class="contact-box">
-
-
-<p>
 <i class="fas fa-envelope"></i>
-as8916909@gmail.com
-</p>
 
-
-<p>
-<i class="fas fa-phone"></i>
-+91 9643695083
-</p>
-
-
-<p>
-<i class="fas fa-location-dot"></i>
-Pondicherry University, Puducherry 605014
-India
-</p>
-
-
+</a>
 
 </div>
 
+<div class="hero-stats">
 
+<div class="stat-card">
+
+<h2>
+
+10+
+
+</h2>
+
+<p>
+
+Projects
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+4
+
+</h2>
+
+<p>
+
+Subjects
+
+</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2>
+
+100+
+
+</h2>
+
+<p>
+
+Programs
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="profile-card">
+
+<div class="profile-circle">
+
+<img src="images/Profile.png.png"
+alt="Aditya Singh">
+
+</div>
+
+<div class="experience-card">
+
+<h2>
+
+MCA
+
+</h2>
+
+<p>
+
+Pondicherry University
+
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+<!--=========================
+      ABOUT SECTION
+==========================-->
 
+<section class="about section" id="about">
 
+<div class="section-title">
 
+<h4>
 
+ABOUT ME
 
+</h4>
+
+<h2>
+
+Know Me Better
+
+</h2>
+
+</div>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="images/Profile.png.png"
+alt="Profile">
+
+</div>
+
+<div class="about-content">
+
+<h3>
+
+I'm Aditya Singh
+
+</h3>
+
+<p>
+
+I am currently pursuing my Master of Computer Applications (MCA) from Pondicherry University.
+
+I have strong interest in Web Development, Artificial Intelligence, Python, Data Analytics and Database Management.
+
+</p>
+
+<p>
+
+My goal is to become a Software Engineer who develops modern, intelligent and scalable applications.
+
+</p>
+
+<div class="about-details">
+
+<div>
+
+<strong>Name :</strong>
+
+Aditya Singh
+
+</div>
+
+<div>
+
+<strong>Degree :</strong>
+
+MCA
+
+</div>
+
+<div>
+
+<strong>University :</strong>
+
+Pondicherry University
+
+</div>
+
+<div>
+
+<strong>Email :</strong>
+
+as8916909@gmail.com
+
+</div>
+
+<div>
+
+<strong>Location :</strong>
+
+Puducherry, India
+
+</div>
+
+<div>
+
+<strong>Available :</strong>
+
+Internship / Placement
+
+</div>
+
+</div>
+
+<a href="#contact" class="btn">
+
+Hire Me
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Skills section next -->
+
+<!-- =====================================
+              SKILLS SECTION
+====================================== -->
+
+<section class="skills section" id="skills">
+
+    <div class="section-title">
+
+        <h4>MY SKILLS</h4>
+
+        <h2>Technologies I Work With</h2>
+
+    </div>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML5</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS3</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fas fa-database"></i>
+            <h3>MySQL</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-java"></i>
+            <h3>Java</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-git-alt"></i>
+            <h3>Git</h3>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            EDUCATION SECTION
+====================================== -->
+
+<section class="education section" id="education">
+
+    <div class="section-title">
+
+        <h4>EDUCATION</h4>
+
+        <h2>Academic Journey</h2>
+
+    </div>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <span>2025 - Present</span>
+
+            <h3>Master of Computer Applications (MCA)</h3>
+
+            <p>Pondicherry University</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <span>2021 - 2024</span>
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>GNIOT Institute of Professional Studies</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <span>2019-2021</span>
+
+            <h3>Senior Secondary (Class XII)</h3>
+
+            <p>CBSE Board</p>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <span>2019</span>
+
+            <h3>Secondary (Class X)</h3>
+
+            <p>CBSE Board</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        FEATURED PROJECT
+====================================== -->
+
+<section class="projects section" id="projects">
+
+    <div class="section-title">
+
+        <h4>FEATURED PROJECT</h4>
+
+        <h2>AI Quiz Assessment GPT System</h2>
+
+    </div>
+
+    <div class="featured-project">
+
+        <div class="featured-image">
+
+            <img src="images/gptsystem.png.png"
+                 alt="AI Quiz Assessment GPT System">
+
+        </div>
+
+        <div class="featured-content">
+
+            <span class="badge">
+                ⭐ Major Project
+            </span>
+
+            <h2>
+                AI Quiz Assessment GPT System
+            </h2>
+
+            <p>
+
+                AI-powered Quiz Assessment System developed using
+                Python, Flask, MySQL, HTML, CSS and JavaScript.
+
+            </p>
+
+            <ul>
+
+                <li>✔ AI Generated Quiz</li>
+
+                <li>✔ QR Code Generation</li>
+
+                <li>✔ Teacher Dashboard</li>
+
+                <li>✔ Student Portal</li>
+
+                <li>✔ Automatic Evaluation</li>
+
+                <li>✔ Result Management</li>
+
+            </ul>
+
+            <div class="tech-stack">
+
+                <span>Python</span>
+
+                <span>Flask</span>
+
+                <span>MySQL</span>
+
+                <span>HTML</span>
+
+                <span>CSS</span>
+
+                <span>JavaScript</span>
+
+                <span>OpenAI API</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href="projects/ai-quiz/index.html"
+                   class="btn">
+
+                    <i class="fas fa-eye"></i>
+
+                    View Project
+
+                </a>
+
+                <a href="https://github.com/AdityaSingh0005"
+                   target="_blank"
+                   class="btn-outline">
+
+                    <i class="fab fa-github"></i>
+
+                    GitHub
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<!-- =====================================
+            OTHER PROJECTS
+====================================== -->
+
+<div class="section-title" style="margin-top:80px;">
+
+    <h4>OTHER PROJECTS</h4>
+
+    <h2>Recent Works</h2>
+
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+
+<img src="images/bookstore.jpeg">
+
+<h3>Bookstore Management System</h3>
+
+<p>
+
+Flask + MySQL based Bookstore Application.
+
+</p>
+
+<a href="#">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/portfolio.jpeg">
+
+<h3>Portfolio Website</h3>
+
+<p>
+
+Personal Academic Portfolio Website.
+
+</p>
+
+<a href="#">
+
+View Details
+
+</a>
+
+</div>
+
+<div class="project-card">
+
+<img src="images/myantra.jpeg">
+
+<h3>Myntra Clone</h3>
+
+<p>
+
+Responsive Frontend Shopping Website.
+
+</p>
+
+<a href="#">
+
+View Details
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================
+        ACADEMIC DASHBOARD
+====================================== -->
+
+<section class="academic section" id="academic">
+
+    <div class="section-title">
+
+        <h4>ACADEMIC DASHBOARD</h4>
+
+        <h2>Semester Subjects</h2>
+
+        <p>
+            Click on any subject to explore Lab Work, Assignments,
+            Notes, Projects and GitHub Repository.
+        </p>
+
+    </div>
+
+    <div class="subject-grid">
+
+        <!-- IWT -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+
+                <i class="fas fa-globe"></i>
+
+            </div>
+
+            <h3>Internet & Web Technologies</h3>
+
+            <p>
+
+                HTML, CSS, JavaScript,
+                Mini Projects,
+                Resume Website,
+                Quiz Application,
+                Assignments.
+
+            </p>
+
+            <a href="semester/iwt/index.html" class="btn">
+
+                Open Dashboard
+
+            </a>
+
+        </div>
+
+        <!-- DBMS -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+
+                <i class="fas fa-database"></i>
+
+            </div>
+
+            <h3>Database Management System</h3>
+
+            <p>
+
+                SQL Programs,
+                ER Diagram,
+                Assignments,
+                Notes,
+                Practical Work.
+
+            </p>
+
+            <a href="semester/dbms/index.html" class="btn">
+
+                Open Dashboard
+
+            </a>
+
+        </div>
+
+        <!-- DSA -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+
+                <i class="fas fa-code"></i>
+
+            </div>
+
+            <h3>Data Structures & Algorithms</h3>
+
+            <p>
+
+                C++ Programs,
+                Arrays,
+                Linked List,
+                Stack,
+                Queue,
+                Trees,
+                Graphs.
+
+            </p>
+
+            <a href="semester/dsa/index.html" class="btn">
+
+                Open Dashboard
+
+            </a>
+
+        </div>
+
+        <!-- Software Engineering -->
+
+        <div class="subject-card">
+
+            <div class="subject-icon">
+
+                <i class="fas fa-gears"></i>
+
+            </div>
+
+            <h3>Software Engineering</h3>
+
+            <p>
+
+                SDLC,
+                UML,
+                Reports,
+                Assignments,
+                Notes,
+                Documentation.
+
+            </p>
+
+            <a href="semester/software-engineering/index.html"
+               class="btn">
+
+                Open Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        CERTIFICATES
+====================================== -->
+
+<section class="certificates section">
+
+    <div class="section-title">
+
+        <h4>CERTIFICATES</h4>
+
+        <h2>Courses & Certifications</h2>
+
+    </div>
+
+    <div class="certificate-container">
+
+        <div class="certificate-card">
+
+            <i class="fas fa-award"></i>
+
+            <h3>IBM Data Analytics</h3>
+
+            <p>Coursera Professional Certificate</p>
+
+        </div>
+
+        <div class="certificate-card">
+
+            <i class="fas fa-graduation-cap"></i>
+
+            <h3>NPTEL</h3>
+
+            <p>Programming & Skill Enhancement</p>
+
+        </div>
+
+        <div class="certificate-card">
+
+            <i class="fab fa-google"></i>
+
+            <h3>Google</h3>
+
+            <p>Future Certificates</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        CONTACT
+====================================== -->
+
+<section class="contact section" id="contact">
+
+    <div class="section-title">
+
+        <h4>CONTACT</h4>
+
+        <h2>Let's Connect</h2>
+
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <i class="fas fa-envelope"></i>
+
+            <h3>Email</h3>
+
+            <p>as8916909@gmail.com</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fas fa-phone"></i>
+
+            <h3>Phone</h3>
+
+            <p>+91 9643695083</p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fab fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <a href="https://github.com/AdityaSingh0005"
+               target="_blank">
+
+                github.com/AdityaSingh0005
+
+            </a>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fab fa-linkedin"></i>
+
+            <h3>LinkedIn</h3>
+
+            <a href="https://www.linkedin.com/in/aditya-singh-789b14217/"
+               target="_blank">
+
+                View Profile
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        FOOTER
+====================================== -->
 
 <footer>
 
-<p>
-© 2026 Aditya Singh | Portfolio Website
-</p>
+    <div class="footer-content">
 
+        <h2>
+
+            Aditya Singh
+
+        </h2>
+
+        <p>
+
+            MCA Student | Web Developer | Python Programmer
+
+        </p>
+
+        <div class="footer-social">
+
+            <a href="https://github.com/AdityaSingh0005">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+            <a href="https://www.linkedin.com/in/aditya-singh-789b14217/">
+
+                <i class="fab fa-linkedin"></i>
+
+            </a>
+
+            <a href="mailto:as8916909@gmail.com">
+
+                <i class="fas fa-envelope"></i>
+
+            </a>
+
+        </div>
+
+        <hr>
+
+        <p>
+
+            © 2026 Aditya Singh.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
 
 </footer>
 
-
-
-
-
-
-<!-- JavaScript -->
+<!-- =====================================
+        JAVASCRIPT
+====================================== -->
 
 <script src="script.js"></script>
 
-
 </body>
-
-
 </html>

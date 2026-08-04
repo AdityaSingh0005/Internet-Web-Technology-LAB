@@ -1,94 +1,89 @@
-// ==========================
-// Typing Animation
-// ==========================
+// =========================================
+// TYPING ANIMATION
+// =========================================
 
 
-const typingText = document.getElementById("typing");
+const typingElement = document.getElementById("typing");
 
 
-const roles = [
+const words = [
 
-    "MCA Student",
-    "Data Analyst Aspirant",
     "Web Developer",
-    "Python Programmer"
+
+    "Python Programmer",
+
+    "Data Analytics Enthusiast",
+
+    "AI Project Developer"
 
 ];
 
 
-let roleIndex = 0;
+let wordIndex = 0;
 
 let charIndex = 0;
 
-let deleting = false;
+let isDeleting = false;
 
 
 
 function typeEffect(){
 
 
-    let currentRole = roles[roleIndex];
+    let currentWord = words[wordIndex];
 
 
-    if(!deleting){
+    if(isDeleting){
 
-
-        typingText.textContent =
-        currentRole.substring(0,charIndex+1);
-
-
-        charIndex++;
-
-
-        if(charIndex === currentRole.length){
-
-
-            deleting = true;
-
-            setTimeout(typeEffect,1500);
-
-            return;
-
-        }
-
+        typingElement.textContent =
+        currentWord.substring(0,charIndex--);
 
     }
 
     else{
 
-
-        typingText.textContent =
-        currentRole.substring(0,charIndex-1);
-
-
-        charIndex--;
-
-
-        if(charIndex === 0){
-
-
-            deleting = false;
-
-
-            roleIndex++;
-
-
-            if(roleIndex === roles.length){
-
-                roleIndex = 0;
-
-            }
-
-
-        }
-
+        typingElement.textContent =
+        currentWord.substring(0,charIndex++);
 
     }
 
 
-    setTimeout(typeEffect,100);
+
+    if(!isDeleting && charIndex === currentWord.length){
+
+        isDeleting = true;
+
+        setTimeout(typeEffect,1500);
+
+    }
+
+
+    else if(isDeleting && charIndex === 0){
+
+        isDeleting=false;
+
+        wordIndex++;
+
+        if(wordIndex >= words.length){
+
+            wordIndex=0;
+
+        }
+
+        setTimeout(typeEffect,500);
+
+    }
+
+
+    else{
+
+        setTimeout(typeEffect,100);
+
+    }
+
 
 }
+
 
 
 typeEffect();
@@ -98,70 +93,58 @@ typeEffect();
 
 
 
+// =========================================
+// MOBILE MENU
+// =========================================
 
 
-// ==========================
-// Scroll Reveal Animation
-// ==========================
+const menuBtn = document.querySelector(".menu-btn");
 
-
-const sections = document.querySelectorAll(".section");
-
-
-
-function revealOnScroll(){
-
-
-    sections.forEach(section=>{
-
-
-        let position =
-        section.getBoundingClientRect().top;
-
-
-        let screenHeight =
-        window.innerHeight;
+const navLinks = document.querySelector(".nav-links");
 
 
 
-        if(position < screenHeight - 100){
+menuBtn.addEventListener("click",()=>{
 
 
-            section.classList.add("show");
+    navLinks.classList.toggle("active");
 
 
-        }
+});
+
+
+
+
+
+// Close menu after clicking link
+
+
+document.querySelectorAll(".nav-links a")
+.forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        navLinks.classList.remove("active");
 
 
     });
 
 
-}
-
-
-
-window.addEventListener(
-"scroll",
-revealOnScroll
-);
-
-
-
-revealOnScroll();
+});
 
 
 
 
 
 
+// =========================================
+// NAVBAR BACKGROUND ON SCROLL
+// =========================================
 
-// ==========================
-// Navbar Background Change
-// ==========================
 
-
-const header =
-document.querySelector("header");
+const header = document.querySelector(".header");
 
 
 
@@ -177,11 +160,125 @@ window.addEventListener("scroll",()=>{
 
     }
 
+
     else{
 
 
         header.style.background =
         "rgba(5,8,22,0.75)";
+
+
+    }
+
+
+
+});
+
+
+
+
+
+// =========================================
+// ACTIVE NAV LINK
+// =========================================
+
+
+
+const sections = document.querySelectorAll("section");
+
+const navItems = document.querySelectorAll(".nav-links a");
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    let current="";
+
+
+    sections.forEach(section=>{
+
+
+        let sectionTop =
+        section.offsetTop - 150;
+
+
+        let sectionHeight =
+        section.clientHeight;
+
+
+
+        if(
+            pageYOffset >= sectionTop &&
+            pageYOffset < sectionTop + sectionHeight
+        ){
+
+            current = section.getAttribute("id");
+
+        }
+
+
+    });
+
+
+
+    navItems.forEach(link=>{
+
+
+        link.classList.remove("active");
+
+
+        if(link.getAttribute("href")
+        === "#" + current){
+
+
+            link.classList.add("active");
+
+
+        }
+
+
+    });
+
+
+});
+
+/* =========================================
+        DARK / LIGHT MODE
+========================================= */
+
+
+const themeButton = document.getElementById("theme-toggle");
+
+
+let darkMode = true;
+
+
+
+themeButton.addEventListener("click",()=>{
+
+
+    document.body.classList.toggle("light-mode");
+
+
+    darkMode = !darkMode;
+
+
+
+    if(darkMode){
+
+
+        themeButton.innerHTML =
+        '<i class="fas fa-moon"></i>';
+
+
+    }
+
+    else{
+
+
+        themeButton.innerHTML =
+        '<i class="fas fa-sun"></i>';
 
 
     }
@@ -193,44 +290,149 @@ window.addEventListener("scroll",()=>{
 
 
 
+/* =========================================
+        SCROLL REVEAL ANIMATION
+========================================= */
 
 
-// ==========================
-// Auto Current Year Footer
-// ==========================
+const revealElements = document.querySelectorAll(
 
+".section, .skill-card, .project-card, .subject-card, .certificate-card, .contact-card"
 
-const footer =
-document.querySelector("footer p");
-
-
-
-let year =
-new Date().getFullYear();
+);
 
 
 
-footer.innerHTML =
-`© ${year} Aditya Singh | Portfolio Website`;
-
-// ==========================
-// Mobile Menu
-// ==========================
+function revealOnScroll(){
 
 
-const menuIcon =
-document.getElementById("menu-icon");
+    revealElements.forEach(element=>{
 
 
-const navLinks =
-document.getElementById("nav-links");
+        let windowHeight =
+        window.innerHeight;
+
+
+        let elementTop =
+        element.getBoundingClientRect().top;
+
+
+        let revealPoint = 120;
 
 
 
-menuIcon.addEventListener("click",()=>{
+        if(elementTop < windowHeight - revealPoint){
 
 
-navLinks.classList.toggle("active");
+            element.classList.add("show");
+
+
+        }
+
+
+    });
+
+
+}
+
+
+
+window.addEventListener(
+
+"scroll",
+
+revealOnScroll
+
+);
+
+
+
+revealOnScroll();
+
+
+
+
+
+
+/* =========================================
+        PROJECT IMAGE EFFECT
+========================================= */
+
+
+const projectImages =
+document.querySelectorAll(".project-card img, .featured-image img");
+
+
+
+projectImages.forEach(image=>{
+
+
+    image.addEventListener("mouseenter",()=>{
+
+
+        image.style.transform =
+        "scale(1.05)";
+
+
+    });
+
+
+
+    image.addEventListener("mouseleave",()=>{
+
+
+        image.style.transform =
+        "scale(1)";
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+/* =========================================
+        BUTTON RIPPLE EFFECT
+========================================= */
+
+
+const buttons =
+document.querySelectorAll(".btn, .btn-outline");
+
+
+
+buttons.forEach(button=>{
+
+
+    button.addEventListener("click",(e)=>{
+
+
+        let ripple =
+        document.createElement("span");
+
+
+        ripple.classList.add("ripple");
+
+
+        button.appendChild(ripple);
+
+
+
+        setTimeout(()=>{
+
+
+            ripple.remove();
+
+
+        },600);
+
+
+    });
 
 
 });
@@ -241,38 +443,144 @@ navLinks.classList.toggle("active");
 
 
 
-// ==========================
-// Dark Light Mode
-// ==========================
+/* =========================================
+        IMAGE LOAD ANIMATION
+========================================= */
 
 
-const themeBtn =
-document.getElementById("theme-btn");
-
-
-
-themeBtn.addEventListener("click",()=>{
-
-
-document.body.classList.toggle("light-mode");
+const images =
+document.querySelectorAll("img");
 
 
 
-if(document.body.classList.contains("light-mode")){
+images.forEach(img=>{
 
 
-themeBtn.innerHTML="☀️";
+    img.addEventListener("load",()=>{
+
+
+        img.classList.add("loaded");
+
+
+    });
+
+
+});
+
+
+
+
+
+
+/* =========================================
+        AUTO YEAR FOOTER
+========================================= */
+
+
+const year =
+new Date().getFullYear();
+
+
+
+const footerYear =
+document.querySelector(".footer-year");
+
+
+
+if(footerYear){
+
+
+    footerYear.textContent = year;
 
 
 }
 
-else{
 
 
-themeBtn.innerHTML="🌙";
 
 
-}
+/* =========================================
+        SCROLL TO TOP BUTTON
+========================================= */
 
+
+const topButton =
+document.createElement("button");
+
+
+topButton.innerHTML =
+'<i class="fas fa-arrow-up"></i>';
+
+
+
+topButton.classList.add("top-button");
+
+
+
+document.body.appendChild(topButton);
+
+
+
+
+window.addEventListener("scroll",()=>{
+
+
+    if(window.scrollY > 500){
+
+
+        topButton.classList.add("active");
+
+
+    }
+
+    else{
+
+
+        topButton.classList.remove("active");
+
+
+    }
+
+
+});
+
+
+
+
+topButton.addEventListener("click",()=>{
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+});
+
+const glow=document.createElement("div");
+
+glow.className="cursor-glow";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove",(e)=>{
+
+glow.style.left=e.clientX+"px";
+
+glow.style.top=e.clientY+"px";
+
+});
+
+window.addEventListener("scroll",()=>{
+
+const total=document.documentElement.scrollHeight-window.innerHeight;
+
+const progress=(window.scrollY/total)*100;
+
+document.getElementById("progress-bar").style.width=progress+"%";
 
 });
